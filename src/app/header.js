@@ -22,11 +22,6 @@ const Header = () => {
                           Page 2
                         </span>
                     </Link>
-                    <Link href="#">
-                        <span className="cursor-pointer text-gray-600 hover:text-indigo-600 transition duration-300">
-                          Page 3
-                        </span>
-                    </Link>
                 </div>
                 <Link href="#">
                   <span
