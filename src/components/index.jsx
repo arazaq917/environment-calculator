@@ -1,5 +1,6 @@
 'use client'
 import React, {useEffect, useState} from "react";
+import Link from "next/link";
 
 const PaperCalculator = () => {
     const [numberOfPages, setNumberOfPages] = useState(1000);
@@ -14,7 +15,7 @@ const PaperCalculator = () => {
     });
     const initialTrees = Math.floor(Math.random() * (99999999 - 10000000 + 1) + 10000000);
 
-    const BASE_PAPER_CERTIFICATE_COST = 30;  // Assuming RM30 as the cost of a single paper certificate
+    const BASE_PAPER_CERTIFICATE_COST = 30;
 
     const [treesCut, setTreesCut] = useState(initialTrees);
 
@@ -22,9 +23,9 @@ const PaperCalculator = () => {
         calculateValues(1000)
         const interval = setInterval(() => {
             const randomFloat = Math.random();
-
-            setTreesCut(prevTrees => prevTrees + randomFloat);
-        }, 1000);
+            console.log(randomFloat)
+            setTreesCut(prevTrees => prevTrees + 0.01);
+        }, 10);
         return () => clearInterval(interval);
     }, []);
 
@@ -49,7 +50,10 @@ const PaperCalculator = () => {
             cost_decrease_percentage: costDecreasePercentage
         });
     }
-
+    const numberInputOnWheelPreventChange = (e) => {
+        e.target.blur()
+        e.stopPropagation()
+    }
     return(
         <>
         <div className="min-h-screen bg-gray-100 flex justify-center">
@@ -58,8 +62,8 @@ const PaperCalculator = () => {
                     <h1 className="sm:text-2xl lg:text-4xl font-bold lg:mb-4 text-center">
                         Digital vs Paper Certificate
                     </h1>
-                    <h1 className="sm:text-4xl lg:text-8xl font-bold mb-4 text-center mt-8">
-                        {treesCut.toFixed(2)}
+                    <h1 className="sm:text-4xl lg:text-8xl font-bold mb-4 text-center mt-8 w-fit">
+                        {treesCut.toLocaleString()}
                     </h1>
                     <h1 className="sm:text-2xl lg:text-4xl font-bold mb-4 text-center">
                         Hectares of Forest Cut Down or Burned <span className="text-blue-800">Globally, This Year</span>
@@ -73,6 +77,7 @@ const PaperCalculator = () => {
 
                     <div className="mb-4 w-72">
                         <input
+                            onWheel={numberInputOnWheelPreventChange}
                             value={numberOfPages}
                             onChange={calculatePaper}
                             type="number"
@@ -159,9 +164,11 @@ const PaperCalculator = () => {
                     </div>
                     <div className="text-center">
                         <h2 className="text-3xl font-bold mb-4">Join Our Movement</h2>
-                        <button className="bg-gray-400 text-white px-6 py-3 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                            Contact Us
-                        </button>
+                        <Link href="https://www.myeduid.my/contact">
+                            <button className="bg-gray-400 text-white px-6 py-3 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                                Contact Us
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
