@@ -135,7 +135,7 @@ const PaperCalculator = () => {
                             </h2>
 
                             <p className="text-gray-600">
-                                Saved trees from paper production plus trees that need to absorb {results.CO2_saved/1000}kg of CO2
+                                Saved trees from paper production plus trees that need to absorb <span className="font-medium">{results.CO2_saved/1000}kg</span> of CO2
                             </p>
                         </div>
 
@@ -152,7 +152,7 @@ const PaperCalculator = () => {
                             </h2>
 
                             <p className="text-gray-600">
-                                That is a RM {results.salary_saved.toFixed(0)} salary saved in a year
+                                That is a <span className="font-medium">RM {results.salary_saved.toFixed(0)}</span> salary saved in a year
                             </p>
                         </div>
 
