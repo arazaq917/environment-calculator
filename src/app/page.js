@@ -5,7 +5,6 @@ import PaperCalculator from "../components";
 export default function Home() {
   return (
     <div>
-        <Header/>
         <PaperCalculator/>
     </div>
   )
