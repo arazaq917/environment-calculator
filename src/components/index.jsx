@@ -60,13 +60,13 @@ const PaperCalculator = () => {
     return (
         <>
             <div className="min-h-screen bg-[#131128] flex flex-col items-center justify-center">
-                <div className="w-full flex-col flex items-center" style={{
-                    backgroundImage: 'url(/assets/landingBg.png)',
+                <div className="w-full h-[1300px] flex-col flex items-center" style={{
+                    backgroundImage: 'url(/assets/landingBg2.png)',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center center'
                 }}>
-                    <div className="px-0 pt-14 shadow-md w-full" style={{background: 'linear-gradient(180deg, #9747FF -10%, rgba(0, 0, 0, 0) 90.82%)'}}>
+                    <div className="px-0 pt-14 shadow-md w-full" style={{background: 'linear-gradient(180deg, #9747FF -10%, rgba(0, 0, 0, 0) 60.82%)'}}>
                         <Header/>
                         <div className="w-full text-white py-3 flex flex-col items-center">
                             <div className="flex flex-col items-center">
@@ -78,9 +78,8 @@ const PaperCalculator = () => {
                                         <strong className="text-[60px]">Go Digital</strong> with <strong className="text-[60px]">MyEduID</strong>
                                     </span>
                                 </div>
-                                <span className="text-white font-bold text-center my-8 px-[30px] rounded-[20px] text-[125px] w-max bg-[#FFFFFF33]">
-                                    {/*{treesCut.toLocaleString()}*/}
-                                    83,650,362.77
+                                <span className="text-white font-bold my-8 px-[30px] rounded-[20px] text-[125px] w-full bg-[#FFFFFF33]">
+                                    {treesCut.toLocaleString()}
                                 </span>
                                 <span className="lg:text-[42px] text-center flex flex-col">
                                     <span>Hectares of Trees & Forest <strong>Cut Down</strong> or <strong>Burned</strong></span>
@@ -206,13 +205,38 @@ const PaperCalculator = () => {
                             {/*</div>*/}
                         </div>
                     </div>
-                    <div className="w-[100%] px-[100px]">
-                        <div className="bg-[#FFFFFF] h-[900px] rounded-[20px]">
+                </div>
+                    <div className="w-[100%] mt-[-500px] px-[100px]">
+                        <div className="bg-[#FFFFFF] h-[828px] rounded-[20px] p-[100px]">
+                            <div className="min-h-screen flex flex-col gap-[30px] items-center">
+                                <div className="text-center mb-8">
+                                    <h1 className="text-[42px] font-bold mb-4">Discover Your Return Of Investment</h1>
+                                    <p className="text-[28px]">After Switching to <strong>Blockchain</strong> Certificate with <strong>MyEduID</strong></p>
+                                </div>
 
+                                <div className="text-center mt-3 mb-8">
+                                    <p className="text-[28px]">Enter the estimated Number of <strong>Certificates</strong> Issued annually.</p>
+                                </div>
+
+                                <div className="w-[75%] mb-8 mt-3">
+                                    <input onWheel={numberInputOnWheelPreventChange}
+                                           value={numberOfPages}
+                                           onChange={calculatePaper}
+                                           type="number"
+                                           placeholder="2000 - 10000" className="appearance-none border-none bg-[#F1F1F9] w-full px-4 py-4 border text-[25px] focus-visible:outline-none rounded-md text-center" />
+                                </div>
+
+                                <div className="text-center mb-8 w-[65%]">
+                                    <p className="text-[#282454] text-[20px] leading-[30px] ">*In order to obtain valuable cost and time-saving insights, it is essential to input a minimum of 200 certificates.</p>
+                                </div>
+
+                                <button className="bg-purple-500 text-white text-[25px] font-bold leading-[37px] py-4 px-8 mt-4 rounded-full">
+                                    Discover Your ROI
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <PaperBenefits/>
+                <PaperBenefits results={results}/>
                 <Footer/>
             </div>
         </>
