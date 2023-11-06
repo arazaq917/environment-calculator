@@ -74,7 +74,7 @@ const PaperCalculator = ({initialValue}) => {
                                         <strong className="text-[60px]">Go Digital</strong> with <strong className="text-[60px]">MyEduID</strong>
                                     </span>
                                 </div>
-                                <span className="text-white font-bold my-8 px-[30px] rounded-[20px] text-[125px] w-full bg-[#FFFFFF33]">
+                                <span className="text-white font-bold my-8 px-[30px] rounded-[20px] text-[125px] w-[62vw] bg-[#FFFFFF33]">
                                     {treesCut?.toLocaleString()}
                                 </span>
                                 <span className="lg:text-[42px] text-center flex flex-col">
