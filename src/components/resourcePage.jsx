@@ -7,7 +7,7 @@ import timeIcon from '../../public/assets/Hourglass.png'
 
 export default function PaperBenefits({results, numberOfPages}) {
     return (
-        <div className="text-white flex flex-col gap-[15px] lg:mt-[60px] min-[320px]:mt-[30px] justify-center items-center">
+        <div className="text-white flex flex-col gap-[15px] lg:mt-[160px] min-[320px]:mt-[90px] justify-center items-center">
             <div className="text-center lg:mb-16 min-[320px]:mb-10 flex-col flex lg:gap-[20px] min-[320px]:gap-[10px]">
                 <p className="lg:text-[28px] min-[320px]:text-[12px]">By Switching To</p>
                 <h1 className="lg:text-[60px] min-[320px]:text-[35px] font-bold lg:mb-4">MyEduID</h1>
