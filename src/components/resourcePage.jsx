@@ -5,98 +5,73 @@ import carbonIcon from '../../public/assets/Clouds.png'
 import timeIcon from '../../public/assets/Hourglass.png'
 
 
-export default function PaperBenefits({results}) {
+export default function PaperBenefits({results, numberOfPages}) {
     return (
-        <div className="min-h-screen text-white flex flex-col gap-[15px] mt-[200px] justify-center items-center">
-            <div className="text-center mb-16 flex-col flex gap-[20px]">
-                <p className="text-[28px]">By Switching To</p>
-                <h1 className="text-[60px] font-bold mb-4">MyEduID</h1>
-                <p className="text-[28px]">Blockchain Certificate Solution</p>
+        <div className="text-white flex flex-col gap-[15px] lg:mt-[60px] min-[320px]:mt-[30px] justify-center items-center">
+            <div className="text-center lg:mb-16 min-[320px]:mb-10 flex-col flex lg:gap-[20px] min-[320px]:gap-[10px]">
+                <p className="lg:text-[28px] min-[320px]:text-[12px]">By Switching To</p>
+                <h1 className="lg:text-[60px] min-[320px]:text-[35px] font-bold lg:mb-4">MyEduID</h1>
+                <p className="lg:text-[28px] min-[320px]:text-[12px]">Blockchain Certificate Solution</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                <div className="text-center flex flex-col gap-[26px]">
-                    <h2 className="text-xl">You've <strong>Saved</strong></h2>
-                    <div className="w-[150px] h-[150px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 min-[320px]:gap-x-4 min-[320px]:gap-y-12 lg:gap-8 lg:mb-16 min-[320px]:mb-10">
+                <div className="text-center flex flex-col lg:gap-[26px] min-[320px]:gap-[15px]">
+                    <h2 className="lg:text-xl min-[320px]:text-[12px]">You've <strong>Saved</strong></h2>
+                    <div className="lg:w-[150px] lg:h-[150px] min-[320px]:h-[80px] min-[320px]:w-[80px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
                         <Image
                             src={moneyIcon}
+                            className="min-[320px]:h-[37px] min-[320px]:w-[37px] lg:h-auto lg:w-auto"
                             alt="Picture"
                         />
                     </div>
-                    <p className="font-bold text-2xl">RM {Math.floor(results.salary_saved).toLocaleString()}</p>
-                    <p>Cost Of Production Annually</p>
+                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">RM {Math.floor(results.salary_saved).toLocaleString()}</p>
+                    <p className="min-[320px]:text-[12px] lg:text-[16px]">Cost Of Production Annually</p>
                 </div>
-                <div className="text-center flex flex-col gap-[26px]">
-                    <h2 className="text-xl">You've <strong>Reduced</strong></h2>
-                    <div className="w-[150px] h-[150px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
+                <div className="text-center flex flex-col lg:gap-[26px] min-[320px]:gap-[15px]">
+                    <h2 className="lg:text-xl min-[320px]:text-[12px]">You've <strong>Reduced</strong></h2>
+                    <div className="lg:w-[150px] lg:h-[150px] min-[320px]:h-[80px] min-[320px]:w-[80px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
                         <Image
                             src={carbonIcon}
+                            className="min-[320px]:h-[37px] min-[320px]:w-[37px] lg:h-auto lg:w-auto"
                             alt="Picture"
                         />
                     </div>
-                    <p className="font-bold text-2xl">{results.CO2_saved.toLocaleString()}g</p>
-                    <p>Carbon Dioxide Annually</p>
+                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">{results.CO2_saved.toLocaleString()}g</p>
+                    <p className="min-[320px]:text-[12px] lg:text-[16px]">Carbon Dioxide Annually</p>
                 </div>
-                <div className="text-center flex flex-col gap-[26px]">
-                    <h2 className="text-xl">You've <strong>Protected</strong></h2>
-                    <div className="w-[150px] h-[150px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
+                <div className="text-center flex flex-col lg:gap-[26px] min-[320px]:gap-[15px]">
+                    <h2 className="lg:text-xl min-[320px]:text-[12px]">You've <strong>Protected</strong></h2>
+                    <div className="lg:w-[150px] lg:h-[150px] min-[320px]:h-[80px] min-[320px]:w-[80px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
                         <Image
                             src={treesIcon}
+                            className="min-[320px]:h-[37px] min-[320px]:w-[37px] lg:h-auto lg:w-auto"
                             alt="Picture"
                         />
                     </div>
-                    <p className="font-bold text-2xl">{results.trees_saved.toLocaleString()} Trees</p>
-                    <p>From Getting Cut Annually</p>
+                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">{results.trees_saved.toLocaleString()} Trees</p>
+                    <p className="min-[320px]:text-[12px] lg:text-[16px]">From Getting Cut Annually</p>
                 </div>
-                <div className="text-center flex flex-col gap-[26px]">
-                    <h2 className="text-xl">You've <strong>Saved</strong></h2>
-                    <div className="w-[150px] h-[150px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
+                <div className="text-center flex flex-col lg:gap-[26px] min-[320px]:gap-[15px]">
+                    <h2 className="lg:text-xl min-[320px]:text-[12px]">You've <strong>Saved</strong></h2>
+                    <div className="lg:w-[150px] lg:h-[150px] min-[320px]:h-[80px] min-[320px]:w-[80px] bg-white flex items-center justify-center rounded-full mx-auto p-4">
                         <Image
                             src={timeIcon}
+                            className="min-[320px]:h-[37px] min-[320px]:w-[37px] lg:h-auto lg:w-auto"
                             alt="Picture"
                         />
                     </div>
-                    <p className="font-bold text-2xl">{Math.floor(results.time_saved_hours).toLocaleString()} Hours</p>
-                    <p>Hours Of Productivity</p>
+                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">{Math.floor(results.time_saved_hours).toLocaleString()} Hours</p>
+                    <p className="min-[320px]:text-[12px] lg:text-[16px]">Hours Of Productivity</p>
                 </div>
             </div>
 
-            <p className="text-center text-[42px]">
+            <p className="text-center lg:text-[42px] min-[320px]:text-[12px] mb-4 lg:mb-8">
+                With the total of <strong>{numberOfPages}</strong> Certificate
+            </p>
+
+            <p className="text-center lg:text-[42px] min-[320px]:text-[12px]">
                 Try the <strong>Future</strong> Today with our Verified Certifications.
             </p>
         </div>
-        // <div className="flex flex-col items-center justify-center mt-[100px]">
-        //     <div className="text-white text-5xl mb-10 font-bold">Did You Know?</div>
-        //     <div className="text-white text-3xl mb-10">Paper Certificates is A Silent Threat to Our Planet's Health.</div>
-        //
-        //     <div className="grid grid-cols-3 gap-4 mt-[20px] items-center">
-        //         <div className="flex flex-col items-end gap-[178px]">
-        //             <div className="w-[350px] text-center lg:mr-[-60px] flex flex-col items-center bg-[#FFFFFFCC] p-6 rounded-lg">
-        //                 <div className="mb-4 text-xl font-bold">Deforestation</div>
-        //                 <p>The production of paper certificates is the <strong>main</strong> contribution of deforestation.</p>
-        //             </div>
-        //             <div className="lg:mr-[-15px] text-center w-[350px] flex flex-col items-center bg-[#FFFFFFCC] p-6 rounded-lg">
-        //                 <div className="text-xl font-bold mb-4">Resource Depletion</div>
-        //                 <p>Paper certificates require the use of valuable natural resources.</p>
-        //             </div>
-        //         </div>
-        //
-        //         <div className="z-10 h-[450px] w-[450px] bg-[#FFFFFF] rounded-full flex items-center justify-center">
-        //             <Image
-        //                 src={resource}
-        //                 alt="Picture"
-        //             />
-        //         </div>
-        //
-        //         <div className="w-[350px] flex flex-col text-center items-center bg-[#FFFFFFCC] p-6 rounded-lg">
-        //             <div className="mb-4 text-xl font-bold">Forgery and Fraud</div>
-        //             <p>Paper certificates are susceptible to <strong>forgery</strong> and <strong>fraud</strong>.</p>
-        //         </div>
-        //     </div>
-        //     <span className="font-bold text-[35px] mt-[10px] text-white">Paper Certificates</span>
-        //     <div className="mt-[200px]">
-        //         <span className="font-bold text-[35px] text-white">Join Our Movement To Save Planet Earth !</span>
-        //     </div>
-        // </div>
     );
 }
