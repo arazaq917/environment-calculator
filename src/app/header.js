@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 const Header = () => {
     return (
-        <div className="lg:ml-[100px] min-[320px]:ml-[30px] mb-5">
-            <Link href="#">
+        <div className="mb-5 flex justify-center">
+            <Link href="https://www.myeduid.my/">
                   <span className="cursor-pointer text-indigo-600 font-bold text-xl hover:text-indigo-500 transition duration-300">
                       <Image
                           src={logo}
