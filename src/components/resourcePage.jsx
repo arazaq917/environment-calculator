@@ -24,7 +24,7 @@ export default function PaperBenefits({results, numberOfPages}) {
                             alt="Picture"
                         />
                     </div>
-                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">RM {Math.floor(results.salary_saved).toLocaleString()}</p>
+                    <p className="font-bold lg:text-2xl min-[320px]:text-[12px]">RM {Math.floor(numberOfPages * 15).toLocaleString()}</p>
                     <p className="min-[320px]:text-[12px] lg:text-[16px]">Cost Of Production Annually</p>
                 </div>
                 <div className="text-center flex flex-col lg:gap-[26px] min-[320px]:gap-[15px]">
